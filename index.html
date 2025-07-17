@@ -3,162 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Noel Powell - Tutor, Mentor, and Web Developer">
+    <meta name="description" content="Noel Powell's portfolio. Tutoring in calculus, statistics, accounts, and web development.">
+    <meta name="keywords" content="Noel Powell, tutoring, calculus, statistics, accounts, web developer, portfolio">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'">
     <title>Noel Powell | Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Noel Powell",
+      "jobTitle": "Tutor and Web Developer",
+      "url": "https://github.com/noelpo/portfolio-for-noel-powell",
+      "sameAs": [
+        "https://www.tiktok.com/@no_limits_tutorial_ceo",
+        "https://www.instagram.com/nolimitstutorialservice/",
+        "https://www.linkedin.com/in/noel-powell-3b902614a/?originalSubdomain=jm"
+      ]
+    }
+    </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            overflow-x: hidden;
+            background: #f9f9f9;
+            color: #222;
         }
         header {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-            transform: perspective(1000px) translateZ(-50px);
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        header p {
-            font-size: 1.2rem;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            background: #1d3557;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav {
-            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: transform 0.3s ease, color 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: color 0.2s;
         }
-        nav a:hover {
-            color: #ffd700;
-            transform: scale(1.2);
+        nav a:hover, nav a:focus {
+            color: #fca311;
+            outline: none;
         }
-        .container {
+        main {
             max-width: 900px;
             margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-            transform: perspective(800px) rotateX(10deg);
         }
-        .section {
+        section {
             margin-bottom: 2rem;
         }
-        .section h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #ffd700;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #1d3557;
         }
-        .section p, .section ul {
-            font-size: 1rem;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        .signup {
-            text-align: center;
-            margin: 2rem 0;
+        h2 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .signup a {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: transform 0.3s ease, background 0.3s ease;
-            display: inline-block;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
-        .signup a:hover {
-            background: linear-gradient(to right, #ff4b2b, #ff416c);
-            transform: scale(1.1);
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fca311;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: #1d3557;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+        .social-links a:hover, .social-links a:focus {
+            color: #fca311;
+            outline: none;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill {
+            background: #e9ecef;
+            border-radius: 20px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 500;
+        }
+        .contact-info {
+            background: #f1faee;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.1rem;
         }
         footer {
+            background: #1d3557;
+            color: #fff;
             text-align: center;
-            padding: 1rem;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 1rem 0;
             margin-top: 2rem;
-            box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.2);
+            font-size: 0.95rem;
         }
-        footer p {
-            margin: 0;
-        }
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        footer a:hover {
-            color: white;
-            transform: scale(1.1);
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+            }
+            .profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Noel Powell</h1>
-        <p>Statistics, Accounts, and Calculus Tutor | Aspiring data analyst</p>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#achievements">Achievements</a>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
-            <a href="#signup">Sign Up</a>
         </nav>
     </header>
-
-    <div class="container">
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Hi, I'm Noel Powell! A dedicated tutor specializing in statistics, accounts, and calculus, with a passion for helping students succeed academically. I'm also a web developer, blending technology and education to create impactful learning experiences.</p>
-        </section>
-
-        <section id="achievements" class="section">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Founder of <strong>No Limits Tutorial Services</strong></li>
-                <li>Successfully assisted over 500 students in passing challenging courses like ECON1005.</li>
-                <li>BSc in Computer Science.</li>
-                <li>Author of "ECON1005 for Dummies" – a resource for university students.</li>
-            </ul>
-        </section>
-
-        <section id="signup" class="section">
-            <h2>Sign Up for Tutoring</h2>
-            <p>Interested in tutoring sessions? Sign up now to start your journey toward academic success!</p>
-            <div class="signup">
-                <a href="https://forms.gle/Hzts6wCmvCsC5X1m6" target="_blank">Sign Up Here</a>
+    <main role="main">
+        <section id="about">
+            <div class="profile">
+                <img src="https://avatars.githubusercontent.com/u/16393883?v=4" alt="Noel Powell profile photo">
+                <div>
+                    <h1>Noel Powell</h1>
+                    <h3>Tutor & Web Developer</h3>
+                    <p>
+                        Dedicated educator and developer, passionate about empowering students in calculus, statistics, accounts, and web technologies.<br>
+                        Experienced in personalized tutoring and modern web development, delivering results with patience and clarity.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@no_limits_tutorial_ceo" target="_blank" aria-label="TikTok: @no_limits_tutorial_ceo">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nolimitstutorialservice/" target="_blank" aria-label="Instagram: @nolimitstutorialservice">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/noel-powell-3b902614a/?originalSubdomain=jm" target="_blank" aria-label="LinkedIn: Noel Powell">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:noelpwell@gmail.com" aria-label="Email Noel Powell">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Connect with me on social media:</p>
-            <ul>
-                <li><a href="https://www.tiktok.com/@no_limits_tutorial_ceo" target="_blank"><i class="fab fa-tiktok"></i>TikTok</a></li>
-                <li><a href="https://www.instagram.com/nolimitstutorialservice/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/noel-powell-3b902614a/?originalSubdomain=jm" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-                <li><a href="noelpwell@gmail.com"><i class="fas fa-envelope"></i>Email Me</a></li>
-            </ul>
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-list" aria-label="Skills">
+                <span class="skill">Calculus Tutoring</span>
+                <span class="skill">Statistics Tutoring</span>
+                <span class="skill">Accounts Tutoring</span>
+                <span class="skill">HTML & CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Responsive Web Design</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Communication</span>
+                <span class="skill">Problem Solving</span>
+            </div>
         </section>
-    </div>
-
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:noelpwell@gmail.com">noelpwell@gmail.com</a>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (876) 569-2703</span>
+                </div>
+                <div>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/18765692703" target="_blank" aria-label="WhatsApp Noel Powell">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Noel Powell. All rights reserved. | <a href="https://github.com/noelpo" target="_blank">GitHub</a></p>
+        &copy; 2025 Noel Powell. All rights reserved.
     </footer>
 </body>
 </html>
